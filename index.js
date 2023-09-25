@@ -58,6 +58,10 @@ todoList.addEventListener('input', (e) => {
 function createTask(task){
   const taskEl = document.createElement('li');
 
+  if (task.isCompleted){
+    taskEl.classList.add('complete')
+  }
+
   taskEl.setAttribute('id', task.id);
 
 const taskElMarkup = `

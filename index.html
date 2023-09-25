@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <title>ToDo App</title>
+</head>
+<body>
+<section class="todo">
+
+  <header id="main-header">
+    <div class="container">
+      <h1>Today</h1>
+
+      <form action="" id="todo-form">
+        <input type="text" name="task-name" placeholder="e.g. Buy groceries" autofocus>
+        <button type="submit">Add task</button>
+      </form>
+    </div>
+  </header>
+
+  <section id="todo-section">
+    <div class="container" id="main-content">
+      <ul class="stats">
+        <li>
+          <span>Remaining</span>
+          <span id="remaining-tasks">0</span>
+        </li>
+        <li>
+          <span>Completed</span>
+          <span id="completed-tasks">0</span>
+        </li>
+        <li>
+          <span>Total</span>
+          <span id="total-tasks">0</span>
+        </li>
+      </ul>
+
+      <ul id="todos"></ul>
+  </div>
+</section>
+</section>
+
+
+
+  <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap');
+
+*  {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: figtree, 'san-serif';
+  outline: 0;
+}
+
+:root{
+  --button-color: #d6542c;
+  --primary-color: #03213c;
+  --secondary-color: #5095d2;
+  --light: #e4f1fb;
+  --white: #ffe;
+  --disabled: #639aca73;
+  --text-disabled: #3a5c7a73;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+section.todo {
+  width: 450px;
+  overflow: hidden;
+  background: var(--light);
+  height: 90vh;
+  padding-bottom: 1rem;
+}
+
+#main-header{
+  background: var(--primary-color);
+  padding: 2rem 1rem;
+  border-radius: 0 0 5px 5px;
+}
+
+#main-header {
+  color: var(--white);
+}
+
+form {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 5px;
+}
+
+form input{
+  flex: 1;
+  padding: 0 10px;
+  background: #3a5c7a73;
+  backdrop-filter: blur(20px);
+  color: var(--white);
+}
+
+form input::placeholder{
+  color: rgba(255, 255, 255, 0.578)
+}
+
+form input, form button {
+  height: 2.3rem;
+    border-radius: 2px;
+}
+
+form button {
+  padding: 0 12px;
+  background: var(--button-color);
+  color: var(--white);
+}
+
+.stats {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.stats li{
+  display: flex;
+  font-size: 12px;
+}
+
+.stats li span{
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 5px;
+  border-radius: 5px 0 0 5px;
+}
+
+.stats li span:last-of-type {
+  background: var(--secondary-color);
+  border-radius: 0 5px 5px 0;
+}
+
+#todo-section {
+  padding: 1rem 1rem;
+  overflow: hidden;
+}
+
+#todos li{
+  background-color: white;
+  margin-bottom: 1rem;
+  padding: 1.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 3px;
+}
+
+#todos li div {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+}
+
+#todos li.complete {
+  background: var(--disabled);
+  text-decoration: line-through;
+  color: var(--text-disabled);
+}
+
+input[type='checkbox'] {
+  appearance: none;
+  background-color: transparent;
+  margin: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 2px solid black;
+  border-radius: 100%;
+  display: grid;
+  place-content: center;
+  transition: .2s ease-in-out;
+}
+
+input[type='checkbox']:checked {
+  background-color: var(--disabled);
+  border: none;
+}
+
+#todos {
+  overflow: hidden;
+  height: 5%;
+}
+
+#todos li button {
+  background: transparent;
+  cursor: pointer;
+}
+
+#todos li button:hover {
+  color: #d6542c;
+}
+
+#todos li button:active {
+  transform: scale(.8);
+}
+
+@media screen and (max-width: 400px) {
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  form input {
+    flex: auto;
+  }
+}
